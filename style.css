@@ -5,9 +5,10 @@
 }
 
 :root {
-    --color-primary: #ffc500;
     font-family: 'Montserrat', 'sans-serif';
     font-size: 16px;
+    --color-primary: #ffc500;
+    --defalt-padding: 1rem;
 }
 
 body {
@@ -23,13 +24,15 @@ ul {
 
 .navbar {
     position: fixed;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 9fr;
     align-items: center;
     top: 0;
     left: 0;
-    height: 7.75rem;;
+
     width: 100vw;
+    height: 7.75rem;
     padding: 0 1rem;
 
     background-color: #000;
@@ -57,6 +60,7 @@ ul {
 }
 
 .logo-studion {
+    font-size: 2.375rem;
     font-weight: 900;
     line-height: 1ch; /* relativa ao tamanho da altura do glifo 0 da fonte */
     text-transform: uppercase;
@@ -66,9 +70,69 @@ ul {
 .logo-studion__subtitle {
     font-size: 0.875rem;
     font-weight: 300;
-    float: right;
 }
 
 .copy--primary {
     color: var(--color-primary);
+}
+
+#slider {
+    background-color: #000;    
+    color: #fff;
+}
+
+.slider {
+    position: relative;
+    height: calc(100vh - 7.75rem);
+}
+
+.slider__background-image {
+    width: 1000%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide__copy {
+    position: absolute; 
+    top: 6.25rem;  
+    left: 50vw;
+}
+
+.slide__copy h6 {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem;
+}
+
+.slide__copy h2 {
+    font-size: 6.25rem;
+    text-transform: uppercase;
+    line-height: 6.25rem;
+}
+
+    .slide__copy h2 span {
+    display: block;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    border: 0.125rem solid #fff;
+    border-radius: 5rem;
+    color: var(--color-primary);
+    background: unset;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
 }
